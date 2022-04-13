@@ -11,7 +11,7 @@ class SignupsController < ApplicationController
 
     def create
         signup = Signup.create!(signup_params)
-        render json: signup, status: :created
+        render json: signup.activity, status: :created
     end
 
     def update
@@ -33,7 +33,7 @@ class SignupsController < ApplicationController
     end
 
     def signup_params
-        params.permit(:camper_id, :activity_id, :time)
+        params.permit(:time, :camper_id, :activity_id)
     end
     
 

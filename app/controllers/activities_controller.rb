@@ -4,21 +4,21 @@ class ActivitiesController < ApplicationController
         render json: Activity.all
     end
 
-    def show
-        activity = find_activity 
-        render json: activity
-    end
+    # def show
+    #     activity = find_activity 
+    #     render json: activity
+    # end
 
-    def create
-        activity = Activity.create!(activity_params)
-        render json: activity, status: :created
-    end
+    # def create
+    #     activity = Activity.create!(activity_params)
+    #     render json: activity, status: :created
+    # end
 
-    def update
-        activity = find_activity 
-        actitvity.update!(activity_params)
-        render json: activity, status: :created
-    end
+    # def update
+    #     activity = find_activity 
+    #     actitvity.update!(activity_params)
+    #     render json: activity, status: :created
+    # end
 
     def destroy
         activity = find_activity 
